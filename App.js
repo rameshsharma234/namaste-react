@@ -10,15 +10,13 @@ import ReactDOM from 'react-dom/client';
 </div>
 */
 
-const parent = React.createElement('div', {id: 'parent'},
-[
-    React.createElement('div', {id: 'child'},[React.createElement('h1', {}, 'Hi I am H1 tag!!'),
-React.createElement('h2', {}, 'Hi I am H2 tag!!')] ),
-React.createElement('div', {id: 'child2'},[React.createElement('h1', {}, 'Hi I am H1 tag!!'),
-React.createElement('h2', {}, 'Hi I am H2 tag!!')] )
-]
+const Header = ()=> (
+  <div className='header'>
+    <div className='logo'>Logo</div>
+    <input className='search-bar'  placeholder='enter to search' />
+    <div className='user-icon'></div>
+  </div>
 )
 
-console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
+root.render(<Header/>);
